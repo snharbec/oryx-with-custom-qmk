@@ -3,6 +3,7 @@
 #include "i18n.h"
 #define MOON_LED_LEVEL LED_LEVEL
 #define ML_SAFE_RANGE SAFE_RANGE
+#include "features/achordion.h"
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
@@ -188,7 +189,13 @@ bool rgb_matrix_indicators_user(void) {
   return true;
 }
 
+void housekeeping_task_user(void) {
+  achordian_task();
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if (!process_achordion_user(keycode, record)) { return false; }
+
   switch (keycode) {
     case ST_MACRO_0:
     if (record->event.pressed) {
