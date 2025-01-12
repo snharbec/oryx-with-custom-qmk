@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LT(4,KC_TAB),   KC_Q,           KC_W,           KC_E,           KC_R,           MT(MOD_LCTL, KC_T),                                MT(MOD_RCTL, DE_Y),KC_U,           KC_I,           KC_O,           KC_P,           TD(DANCE_4),    
     TD(DANCE_1),    KC_A,           KC_S,           MT(MOD_LGUI, KC_D),LT(1,KC_F),     MT(MOD_LSFT, KC_G),                                MT(MOD_RSFT, KC_H),LT(5,KC_J),     MT(MOD_RGUI, KC_K),KC_L,           DE_OE,          TD(DANCE_5),    
     KC_LEFT_SHIFT,  MT(MOD_LALT, DE_Z),KC_X,           KC_C,           KC_V,           MT(MOD_LALT, KC_B),                                MT(MOD_LALT, KC_N),MT(MOD_RALT, KC_M),TD(DANCE_6),    TD(DANCE_7),    TD(DANCE_8),    KC_RIGHT_SHIFT, 
-                                                    TD(DANCE_2),    TD(DANCE_3),                                    LT(4,KC_ENTER), LT(2,KC_BSPC)
+                                                    TD(DANCE_2),    TD(DANCE_3),                                    LT(5,KC_ENTER), LT(2,KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,                                          KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,         
@@ -110,7 +110,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM -52;
         case TD(DANCE_3):
             return TAPPING_TERM -52;
-        case LT(4,KC_ENTER):
+        case LT(5,KC_ENTER):
             return TAPPING_TERM -52;
         case LT(2,KC_BSPC):
             return TAPPING_TERM -102;
