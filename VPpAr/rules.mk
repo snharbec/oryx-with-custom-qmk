@@ -9,3 +9,5 @@ TAP_DANCE_ENABLE = yes
 SPACE_CADET_ENABLE = no
 CAPS_WORD_ENABLE = yes
 COMBO_ENABLE = yes
+# Custom QMK rules here
+KEY_OVERRIDE_ENABLE = yes
