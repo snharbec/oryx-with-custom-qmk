@@ -336,11 +336,13 @@ __attribute__((weak)) bool achordion_chord(uint16_t tap_hold_keycode,
                                            uint16_t other_keycode,
                                            keyrecord_t* other_record) {
    // So if we are on a different row than allow hold function
-  if (tap_hold_record->event.key.row != other_record->event.key.row)
+  if (tap_hold_keycode->event.key.row == 5)
     return true;
-  if (tap_hold_record->event.key.col == 0 &&
-      tap_hold_record->event.key.row == 1)
-    return true;
+  // if (tap_hold_record->event.key.row != other_record->event.key.row)
+  //   return true;
+  // if (tap_hold_record->event.key.col == 0 &&
+  //     tap_hold_record->event.key.row == 1)
+  //   return true;
   return achordion_opposite_hands(tap_hold_record, other_record);
 }
 
