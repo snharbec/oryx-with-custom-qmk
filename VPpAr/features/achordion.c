@@ -341,8 +341,9 @@ __attribute__((weak)) bool achordion_chord(uint16_t tap_hold_keycode,
   
   switch (tap_hold_keycode) {
     case 16938:
-    case 17447:
+    case 17448:
     case 16484:
+    case 17707:
       return true;
   } 
   return achordion_opposite_hands(tap_hold_record, other_record);
