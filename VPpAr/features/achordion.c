@@ -337,8 +337,7 @@ __attribute__((weak)) bool achordion_chord(uint16_t tap_hold_keycode,
                                            uint16_t other_keycode,
                                            keyrecord_t* other_record) {
    // So if we are on a different row than allow hold function
-  dprintf("Achordion: Col %d, Row %d\n", tap_hold_record->event.key.col, tap_hold_record->event.key.row);
-  
+  dprintf("Achordion: Col %d/%d\n", tap_hold_record->event.key.col, tap_hold_record->event.key.row);
   switch (tap_hold_keycode) {
     case 16938:
     case 17448:
