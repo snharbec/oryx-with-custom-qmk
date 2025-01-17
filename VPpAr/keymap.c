@@ -123,6 +123,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 extern rgb_config_t rgb_matrix_config;
 
 void keyboard_post_init_user(void) {
+  debug_enable = true;
+  debug_matrix = true;
   rgb_matrix_enable();
 }
 
