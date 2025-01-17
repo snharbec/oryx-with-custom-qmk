@@ -188,7 +188,7 @@ bool process_achordion(uint16_t keycode, keyrecord_t* record) {
           }
         }
 
-        dprintf("Achordion: Key 0x%04X pressed.%s\n", keycode,
+        dprintf("HAR Achordion: Key 0x%04X pressed.%s\n", keycode,
                 eager_mods ? " Set eager mods." : "");
         return false;  // Skip default handling.
       }
