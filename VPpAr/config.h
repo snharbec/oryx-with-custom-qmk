@@ -14,7 +14,7 @@
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define AUTO_SHIFT_TIMEOUT 240
 #define NO_AUTO_SHIFT_ALPHA
-#define SERIAL_NUMBER "VPpAr/aNvjmo"
+#define SERIAL_NUMBER "VPpAr/rbKaGw"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 6
 
