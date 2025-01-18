@@ -105,9 +105,13 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM -2;
         case MEH_T(KC_S):
             return TAPPING_TERM + 548;
+        case MT(MOD_LSFT, KC_G):
+            return TAPPING_TERM -52;
         case LT(1,KC_SPACE):
             return TAPPING_TERM -52;
         case LT(5,KC_TAB):
+            return TAPPING_TERM -52;
+        case MT(MOD_RSFT, KC_H):
             return TAPPING_TERM -52;
         case LT(4,KC_ENTER):
             return TAPPING_TERM -52;
