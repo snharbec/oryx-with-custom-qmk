@@ -94,17 +94,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM combo0[] = { KC_4, KC_5, COMBO_END};
 const uint16_t PROGMEM combo1[] = { KC_6, KC_7, COMBO_END};
 const uint16_t PROGMEM combo2[] = { MT(MOD_RSFT, KC_H), KC_J, COMBO_END};
-const uint16_t PROGMEM combo3[] = { LT(1,KC_SPACE), LT(2,KC_BSPC), COMBO_END};
-const uint16_t PROGMEM combo4[] = { MT(MOD_LSFT, KC_G), MT(MOD_LGUI, KC_D), COMBO_END};
-const uint16_t PROGMEM combo5[] = { LT(5,KC_TAB), LT(4,KC_ENTER), COMBO_END};
+const uint16_t PROGMEM combo3[] = { MT(MOD_LSFT, KC_G), MT(MOD_LGUI, KC_D), COMBO_END};
+const uint16_t PROGMEM combo4[] = { LT(5,KC_TAB), LT(4,KC_ENTER), COMBO_END};
+const uint16_t PROGMEM combo5[] = { LT(1,KC_SPACE), LT(2,KC_BSPC), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, KC_HOME),
     COMBO(combo1, KC_END),
     COMBO(combo2, KC_ENTER),
-    COMBO(combo3, LCTL(KC_B)),
-    COMBO(combo4, KC_DELETE),
-    COMBO(combo5, KC_ESCAPE),
+    COMBO(combo3, KC_DELETE),
+    COMBO(combo4, KC_ESCAPE),
+    COMBO(combo5, LCTL(KC_B)),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
