@@ -1,5 +1,4 @@
 #define DE_TILD ALGR(KC_RBRC)
-#define DE_MINS KC_SLSH
 #define DE_Z KC_Y
 #define DE_SS KC_MINS
 #define DE_Y KC_Z
@@ -29,6 +28,7 @@
 #define DE_QUOT S(KC_NUHS)
 #define DE_GRV S(KC_EQL)
 #define DE_DQOT S(KC_2)
+#define DE_MINS KC_SLSH
 #define DE_PLUS KC_RBRC
 #define DE_EQL S(KC_0)
 #define DE_COLN S(KC_DOT)
