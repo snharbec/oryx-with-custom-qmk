@@ -104,6 +104,7 @@ const uint16_t PROGMEM combo4[] = { MT(MOD_LCTL, DE_Y), MT(MOD_RCTL, KC_U), COMB
 const uint16_t PROGMEM combo5[] = { LT(2,KC_SPACE), LT(3,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_LEFT_SHIFT, KC_RIGHT_SHIFT, COMBO_END};
 const uint16_t PROGMEM combo7[] = { MT(MOD_LALT, KC_N), MT(MOD_RALT, KC_M), COMBO_END};
+const uint16_t PROGMEM combo8[] = { KC_R, MT(MOD_LCTL, KC_T), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, KC_HOME),
@@ -114,6 +115,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo5, LCTL(KC_B)),
     COMBO(combo6, TG(1)),
     COMBO(combo7, KC_ESCAPE),
+    COMBO(combo8, KC_BSPC),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
