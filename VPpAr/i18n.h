@@ -22,8 +22,8 @@
 #define DE_LESS KC_NUBS
 #define DE_MORE S(KC_NUBS)
 #define DE_RPRN S(KC_9)
-#define DE_CIRC KC_GRV
 #define DE_AMPR S(KC_6)
+#define DE_CIRC KC_GRV
 #define DE_ASTR S(KC_RBRC)
 #define DE_QUOT S(KC_NUHS)
 #define DE_GRV S(KC_EQL)
