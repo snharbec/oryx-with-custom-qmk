@@ -99,12 +99,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM combo0[] = { KC_4, KC_5, COMBO_END};
 const uint16_t PROGMEM combo1[] = { KC_6, KC_7, COMBO_END};
 const uint16_t PROGMEM combo2[] = { MT(MOD_RSFT, KC_H), KC_J, COMBO_END};
-const uint16_t PROGMEM combo3[] = { MT(MOD_RSFT, KC_H), KC_K, COMBO_END};
+const uint16_t PROGMEM combo3[] = { KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM combo4[] = { MT(MOD_LCTL, DE_Y), MT(MOD_RCTL, KC_U), COMBO_END};
 const uint16_t PROGMEM combo5[] = { LT(2,KC_SPACE), LT(3,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_LEFT_SHIFT, KC_RIGHT_SHIFT, COMBO_END};
-const uint16_t PROGMEM combo7[] = { MT(MOD_LALT, KC_N), MT(MOD_RALT, KC_M), COMBO_END};
-const uint16_t PROGMEM combo8[] = { KC_R, MT(MOD_LCTL, KC_T), COMBO_END};
+const uint16_t PROGMEM combo7[] = { KC_R, MT(MOD_LCTL, KC_T), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, KC_HOME),
@@ -114,8 +113,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo4, KC_ESCAPE),
     COMBO(combo5, LCTL(KC_B)),
     COMBO(combo6, TG(1)),
-    COMBO(combo7, KC_ESCAPE),
-    COMBO(combo8, KC_BSPC),
+    COMBO(combo7, KC_BSPC),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
