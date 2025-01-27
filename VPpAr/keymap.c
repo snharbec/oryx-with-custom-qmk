@@ -27,6 +27,7 @@ enum custom_keycodes {
   ST_MACRO_15,
   ST_MACRO_16,
   ST_MACRO_STEFAN,
+  ST_MACRO_MFG,
 };
 
 
@@ -81,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, ST_MACRO_0,     ST_MACRO_1,     KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_2,                                     ST_MACRO_8,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, ST_MACRO_3,     ST_MACRO_STEFAN, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_4,                                     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_9,     ST_MACRO_10,    KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_5,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_11,    ST_MACRO_12,    ST_MACRO_13,    ST_MACRO_14,    KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_6,     KC_TRANSPARENT, KC_TRANSPARENT,                                 ST_MACRO_15,    KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_16,    KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_6,     KC_TRANSPARENT, KC_TRANSPARENT,                                 ST_MACRO_15,   ST_MACRO_MFG, KC_TRANSPARENT, ST_MACRO_16,    KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     ST_MACRO_7,     KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [6] = LAYOUT_voyager(
@@ -322,6 +323,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case ST_MACRO_STEFAN:
     if (record->event.pressed) {
     	SEND_STRING("Stefan Harbeck");
+    }
+    break;
+    case ST_MACRO_MFG:
+    if (record->event.pressed) {
+    	SEND_STRING("Mit freundlichen Grüßen\nStefan Harbeck");
     }
     break;
 
