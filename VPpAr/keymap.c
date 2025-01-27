@@ -339,7 +339,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_MFG:
     if (record->event.pressed) {
-    	SEND_STRING("Mit freundlichen Grüßen\nStefan Harbeck");
+    	SEND_STRING("Mit freundlichen Gr");
+	SEND_STRING(DE_UE);
+	SEND_STRING(DE_SS);
+	SEND_STRING("en");
+	SEND_STRING(KC_ENTER);
+	SEND_STRING("Stefan Harbeck");
     }
     break;
 
