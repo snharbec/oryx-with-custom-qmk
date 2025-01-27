@@ -12,4 +12,4 @@ COMBO_ENABLE = yes
 # Custom QMK rules here
 KEY_OVERRIDE_ENABLE = yes
 SRC += features/achordion.c
-SRC += features/sentence.c
+SRC += features/sentence_case.c
