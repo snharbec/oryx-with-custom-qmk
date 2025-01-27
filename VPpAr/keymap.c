@@ -4,6 +4,8 @@
 #define MOON_LED_LEVEL LED_LEVEL
 #define ML_SAFE_RANGE SAFE_RANGE
 #include "features/achordion.h"
+#include "features/sentence_case.h"
+
 
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
@@ -227,6 +229,7 @@ void housekeeping_task_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  if (!process_sentence_case(keycode, record)) { return false; }
   if (!process_achordion(keycode, record)) { return false; }
 
   switch (keycode) {
