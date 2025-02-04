@@ -102,7 +102,7 @@ const uint16_t PROGMEM combo1[] = { KC_6, KC_7, COMBO_END};
 const uint16_t PROGMEM combo2[] = { MT(MOD_RSFT, KC_H), KC_J, COMBO_END};
 const uint16_t PROGMEM combo3[] = { KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM combo4[] = { MT(MOD_LCTL, DE_Y), MT(MOD_RCTL, KC_U), COMBO_END};
-const uint16_t PROGMEM combo5[] = { LT(2,KC_SPACE), LT(6,KC_DELETE), COMBO_END};
+const uint16_t PROGMEM combo5[] = { LT(2,KC_SPACE), LT(3,KC_SPACE), COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_LEFT_SHIFT, KC_RIGHT_SHIFT, COMBO_END};
 const uint16_t PROGMEM combo7[] = { KC_R, MT(MOD_LCTL, KC_T), COMBO_END};
 const uint16_t PROGMEM combo8[] = { MT(MOD_LALT, KC_N), MT(MOD_RALT, KC_M), COMBO_END};
@@ -126,7 +126,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case MEH_T(KC_S):
             return TAPPING_TERM + 548;
         case MT(MOD_LSFT, KC_G):
-            return TAPPING_TERM -82;
+            return TAPPING_TERM -52;
         case LT(2,KC_SPACE):
             return TAPPING_TERM -52;
         case LT(6,KC_DELETE):
