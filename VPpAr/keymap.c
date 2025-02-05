@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     TD(DANCE_1),    KC_Q,           KC_W,           KC_E,           KC_R,           MT(MOD_LCTL, KC_T),                                MT(MOD_LCTL, DE_Y),MT(MOD_RCTL, KC_U),MT(MOD_RGUI, KC_I),MT(MOD_LALT, KC_O),KC_P,           TD(DANCE_2),    
     CW_TOGG,        KC_A,           MEH_T(KC_S),    MT(MOD_LGUI, KC_D),LT(2,KC_F),     MT(MOD_LSFT, KC_G),                                MT(MOD_RSFT, KC_H),KC_J,           KC_K,           KC_L,           DE_OE,          TD(DANCE_3),    
     KC_LEFT_SHIFT,  MT(MOD_LALT, DE_Z),KC_X,           KC_C,           LT(7,KC_V),     MT(MOD_LALT, KC_B),                                MT(MOD_LALT, KC_N),MT(MOD_RALT, KC_M),KC_COMMA,       KC_DOT,         TD(DANCE_4),    KC_RIGHT_SHIFT, 
-                                                    LT(2,KC_BSPC),  LT(6,KC_DELETE),                                LT(6,KC_BSPC),  LT(3,KC_SPACE)
+                                                    LT(2,KC_SPACE), LT(6,KC_DELETE),                                LT(6,KC_ENTER), LT(3,KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TRANSPARENT, 
@@ -108,7 +108,7 @@ const uint16_t PROGMEM combo1[] = { KC_6, KC_7, COMBO_END};
 const uint16_t PROGMEM combo2[] = { MT(MOD_RSFT, KC_H), KC_J, COMBO_END};
 const uint16_t PROGMEM combo3[] = { KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM combo4[] = { MT(MOD_LCTL, DE_Y), MT(MOD_RCTL, KC_U), COMBO_END};
-const uint16_t PROGMEM combo5[] = { LT(3,KC_SPACE), LT(2,KC_BSPC), COMBO_END};
+const uint16_t PROGMEM combo5[] = { LT(2,KC_SPACE), LT(3,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_LEFT_SHIFT, KC_RIGHT_SHIFT, COMBO_END};
 const uint16_t PROGMEM combo7[] = { KC_R, MT(MOD_LCTL, KC_T), COMBO_END};
 const uint16_t PROGMEM combo8[] = { MT(MOD_LALT, KC_N), MT(MOD_RALT, KC_M), COMBO_END};
@@ -133,15 +133,15 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return TAPPING_TERM + 548;
         case MT(MOD_LSFT, KC_G):
             return TAPPING_TERM -52;
-        case LT(2,KC_BSPC):
+        case LT(2,KC_SPACE):
             return TAPPING_TERM -52;
         case LT(6,KC_DELETE):
             return TAPPING_TERM -52;
         case MT(MOD_RSFT, KC_H):
             return TAPPING_TERM -52;
-        case LT(6,KC_BSPC):
+        case LT(6,KC_ENTER):
             return TAPPING_TERM -52;
-        case LT(3,KC_SPACE):
+        case LT(3,KC_BSPC):
             return TAPPING_TERM -102;
         default:
             return TAPPING_TERM;
