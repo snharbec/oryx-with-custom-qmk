@@ -79,6 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ST_MACRO_STEFAN, KC_TRANSPARENT, ST_MACRO_6,     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, ST_MACRO_12,    ST_MACRO_13,    ST_MACRO_14,    ST_MACRO_15,    KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_7,     KC_TRANSPARENT, KC_TRANSPARENT,                                 ST_MACRO_16,    KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_17,    KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     ST_MACRO_8,     KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
+
   ),
   [5] = LAYOUT_voyager(
     RGB_TOG,        TOGGLE_LAYER_COLOR,RGB_MODE_FORWARD,RGB_SLD,        RGB_VAD,        RGB_VAI,                                        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, QK_BOOT,        
@@ -156,7 +157,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [3] = { {84,218,204}, {0,0,0}, {0,0,157}, {0,0,157}, {0,0,157}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {31,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {253,218,204}, {0,0,0}, {39,218,204}, {39,218,204}, {39,218,204}, {39,218,204}, {0,0,0}, {0,0,0}, {43,255,255}, {43,255,255}, {43,255,255}, {43,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {31,218,204}, {31,218,204} },
 
-    [4] = { {0,0,0}, {159,218,204}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {159,218,204}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {159,218,204}, {159,218,204}, {159,218,204}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
+    [4] = { {0,0,0}, {159,218,204}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {43,146,239}, {0,0,0}, {0,0,0}, {159,218,204}, {43,146,239}, {0,0,0}, {74,57,159}, {159,218,204}, {159,218,204}, {159,218,204}, {74,57,159}, {0,0,0}, {159,218,204}, {0,0,0}, {0,0,0}, {159,218,204}, {43,146,239}, {0,0,0}, {0,0,0}, {0,0,0} },
 
     [5] = { {0,0,255}, {0,0,255}, {0,0,255}, {136,6,230}, {136,6,230}, {136,6,230}, {0,0,0}, {141,218,204}, {141,218,204}, {141,218,204}, {141,218,204}, {141,218,204}, {0,0,0}, {45,113,239}, {45,218,204}, {35,218,204}, {74,61,224}, {63,218,204}, {0,0,0}, {241,146,224}, {241,146,224}, {241,146,224}, {241,146,224}, {241,146,224}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {1,218,204}, {141,218,204}, {141,218,204}, {141,218,204}, {141,218,204}, {141,218,204}, {0,0,0}, {63,218,204}, {74,61,224}, {35,218,204}, {45,218,204}, {45,113,239}, {0,0,0}, {241,146,224}, {241,146,224}, {241,146,224}, {241,146,224}, {241,146,224}, {0,0,0}, {0,0,0}, {0,0,0} },
 
@@ -270,6 +271,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       SEND_STRING(SS_LCTL(SS_TAP(X_B)) SS_DELAY(100) SS_TAP(X_SPACE));
     }
     break;
+<<<<<<< HEAD
     case ST_MACRO_9:
     if (record->event.pressed) {
       SEND_STRING(SS_LCTL(SS_TAP(X_B)) SS_DELAY(100) SS_TAP(X_2));
@@ -330,6 +332,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	SEND_STRING("Stefan Harbeck");
     }
     break;
+=======
+>>>>>>> origin/oryx
 
     case RGB_SLD:
       if (record->event.pressed) {
@@ -413,34 +417,34 @@ void dance_1_reset(tap_dance_state_t *state, void *user_data);
 
 void on_dance_1(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
-        tap_code16(KC_SPACE);
-        tap_code16(KC_SPACE);
-        tap_code16(KC_SPACE);
+        tap_code16(KC_TAB);
+        tap_code16(KC_TAB);
+        tap_code16(KC_TAB);
     }
     if(state->count > 3) {
-        tap_code16(KC_SPACE);
+        tap_code16(KC_TAB);
     }
 }
 
 void dance_1_finished(tap_dance_state_t *state, void *user_data) {
     dance_state[1].step = dance_step(state);
     switch (dance_state[1].step) {
-        case SINGLE_TAP: register_code16(KC_SPACE); break;
-        case SINGLE_HOLD: layer_on(5); break;
+        case SINGLE_TAP: register_code16(KC_TAB); break;
+        case SINGLE_HOLD: layer_on(4); break;
         case DOUBLE_TAP: register_code16(KC_DELETE); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_SPACE); register_code16(KC_SPACE);
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_TAB); register_code16(KC_TAB);
     }
 }
 
 void dance_1_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
     switch (dance_state[1].step) {
-        case SINGLE_TAP: unregister_code16(KC_SPACE); break;
+        case SINGLE_TAP: unregister_code16(KC_TAB); break;
         case SINGLE_HOLD:
-          layer_off(5);
+          layer_off(4);
         break;
         case DOUBLE_TAP: unregister_code16(KC_DELETE); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_SPACE); break;
+        case DOUBLE_SINGLE_TAP: unregister_code16(KC_TAB); break;
     }
     dance_state[1].step = 0;
 }
