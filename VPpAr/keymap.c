@@ -271,7 +271,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       SEND_STRING(SS_LCTL(SS_TAP(X_B)) SS_DELAY(100) SS_TAP(X_SPACE));
     }
     break;
-<<<<<<< HEAD
     case ST_MACRO_9:
     if (record->event.pressed) {
       SEND_STRING(SS_LCTL(SS_TAP(X_B)) SS_DELAY(100) SS_TAP(X_2));
@@ -332,8 +331,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	SEND_STRING("Stefan Harbeck");
     }
     break;
-=======
->>>>>>> origin/oryx
 
     case RGB_SLD:
       if (record->event.pressed) {
