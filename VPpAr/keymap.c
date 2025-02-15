@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     TD(DANCE_0),    KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           DE_SS,          
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           MT(MOD_LCTL, KC_T),                                MT(MOD_LCTL, DE_Z),MT(MOD_RCTL, KC_U),MT(MOD_RGUI, KC_I),MT(MOD_LALT, KC_O),KC_P,           TD(DANCE_2),    
-    CW_TOGG,        KC_A,           MEH_T(KC_S),    MT(MOD_LGUI, KC_D),LT(1,KC_F),     MT(MOD_LSFT, KC_G),                                MT(MOD_RSFT, KC_H),KC_J,           KC_K,           KC_L,           DE_OE,          TD(DANCE_3),    
+    CW_TOGG,        KC_A,           KC_S,           MT(MOD_LGUI, KC_D),LT(1,KC_F),     MT(MOD_LSFT, KC_G),                                MT(MOD_RSFT, KC_H),KC_J,           KC_K,           KC_L,           DE_OE,          TD(DANCE_3),    
     KC_LEFT_SHIFT,  MT(MOD_LALT, DE_Y),KC_X,           KC_C,           LT(6,KC_V),     MT(MOD_LALT, KC_B),                                MT(MOD_LALT, KC_N),MT(MOD_RALT, KC_M),KC_COMMA,       KC_DOT,         TD(DANCE_4),    KC_RIGHT_SHIFT, 
                                                     LT(1,KC_SPACE), TD(DANCE_1),                                    LT(5,KC_ENTER), LT(2,KC_BSPC)
   ),
@@ -103,20 +103,18 @@ combo_t key_combos[COMBO_COUNT] = {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case MT(MOD_LCTL, KC_T):
-            return TAPPING_TERM + 80;
-        case MEH_T(KC_S):
-            return TAPPING_TERM + 630;
+        case MT(MOD_LSFT, KC_G):
+            return TAPPING_TERM -46;
         case LT(1,KC_SPACE):
-            return TAPPING_TERM + 30;
+            return TAPPING_TERM -16;
         case TD(DANCE_1):
-            return TAPPING_TERM + 30;
+            return TAPPING_TERM -16;
         case MT(MOD_RSFT, KC_H):
-            return TAPPING_TERM + 30;
+            return TAPPING_TERM -46;
         case LT(5,KC_ENTER):
-            return TAPPING_TERM + 30;
+            return TAPPING_TERM -16;
         case LT(2,KC_BSPC):
-            return TAPPING_TERM -20;
+            return TAPPING_TERM -66;
         default:
             return TAPPING_TERM;
     }
