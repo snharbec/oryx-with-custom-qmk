@@ -4,7 +4,7 @@
 */
 
 #undef TAPPING_TERM
-#define TAPPING_TERM 252
+#define TAPPING_TERM 170
 
 #define COMBO_TERM 40
 
@@ -14,7 +14,7 @@
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define AUTO_SHIFT_TIMEOUT 240
 #define NO_AUTO_SHIFT_ALPHA
-#define SERIAL_NUMBER "VPpAr/5WOjen"
+#define SERIAL_NUMBER "VPpAr/zLLXzG"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 8
 
