@@ -32,9 +32,9 @@ enum tap_dance_codes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     TD(DANCE_0),    KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           DE_SS,          
-    KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           MT(MOD_LCTL, KC_T),                                MT(MOD_LCTL, DE_Z),MT(MOD_RCTL, KC_U),MT(MOD_RGUI, KC_I),MT(MOD_LALT, KC_O),KC_P,           TD(DANCE_2),    
+    KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           MT(MOD_LCTL, KC_T),                                MT(MOD_LCTL, DE_Y),MT(MOD_RCTL, KC_U),MT(MOD_RGUI, KC_I),MT(MOD_LALT, KC_O),KC_P,           TD(DANCE_2),    
     CW_TOGG,        KC_A,           KC_S,           MT(MOD_LGUI, KC_D),LT(1,KC_F),     MT(MOD_LSFT, KC_G),                                MT(MOD_RSFT, KC_H),KC_J,           KC_K,           KC_L,           DE_OE,          TD(DANCE_3),    
-    KC_LEFT_SHIFT,  MT(MOD_LALT, DE_Y),KC_X,           KC_C,           LT(6,KC_V),     MT(MOD_LALT, KC_B),                                MT(MOD_LALT, KC_N),MT(MOD_RALT, KC_M),KC_COMMA,       KC_DOT,         TD(DANCE_4),    KC_RIGHT_SHIFT, 
+    KC_LEFT_SHIFT,  MT(MOD_LALT, DE_Z),KC_X,           KC_C,           LT(6,KC_V),     MT(MOD_LALT, KC_B),                                MT(MOD_LALT, KC_N),MT(MOD_RALT, KC_M),KC_COMMA,       KC_DOT,         TD(DANCE_4),    KC_RIGHT_SHIFT, 
                                                     LT(1,KC_SPACE), TD(DANCE_1),                                    LT(5,KC_ENTER), LT(2,KC_BSPC)
   ),
   [1] = LAYOUT_voyager(
@@ -85,7 +85,7 @@ const uint16_t PROGMEM combo0[] = { KC_4, KC_5, COMBO_END};
 const uint16_t PROGMEM combo1[] = { KC_6, KC_7, COMBO_END};
 const uint16_t PROGMEM combo2[] = { MT(MOD_RSFT, KC_H), KC_J, COMBO_END};
 const uint16_t PROGMEM combo3[] = { KC_J, KC_K, COMBO_END};
-const uint16_t PROGMEM combo4[] = { MT(MOD_RCTL, KC_U), MT(MOD_LCTL, DE_Z), COMBO_END};
+const uint16_t PROGMEM combo4[] = { MT(MOD_RCTL, KC_U), MT(MOD_LCTL, DE_Y), COMBO_END};
 const uint16_t PROGMEM combo5[] = { LT(1,KC_SPACE), LT(2,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_R, MT(MOD_LCTL, KC_T), COMBO_END};
 const uint16_t PROGMEM combo7[] = { MT(MOD_LALT, KC_N), MT(MOD_RALT, KC_M), COMBO_END};
