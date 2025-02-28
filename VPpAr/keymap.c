@@ -103,7 +103,7 @@ const uint16_t PROGMEM combo1[] = { KC_6, KC_7, COMBO_END};
 const uint16_t PROGMEM combo2[] = { MT(MOD_RSFT, KC_H), KC_J, COMBO_END};
 const uint16_t PROGMEM combo3[] = { KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM combo4[] = { MT(MOD_RCTL, KC_U), MT(MOD_LCTL, DE_Y), COMBO_END};
-const uint16_t PROGMEM combo5[] = { LT(2,KC_BSPC), MT(MOD_LALT, KC_N), COMBO_END};
+const uint16_t PROGMEM combo5[] = { LT(2,KC_BSPC), LT(1,KC_SPACE), COMBO_END};
 const uint16_t PROGMEM combo6[] = { KC_R, MT(MOD_LCTL, KC_T), COMBO_END};
 const uint16_t PROGMEM combo7[] = { MT(MOD_LALT, KC_N), MT(MOD_RALT, KC_M), COMBO_END};
 
@@ -564,7 +564,7 @@ void dance_5_finished(tap_dance_state_t *state, void *user_data) {
     switch (dance_state[5].step) {
         case SINGLE_TAP: register_code16(LCTL(KC_B)); break;
         case SINGLE_HOLD: register_code16(KC_RIGHT_SHIFT); break;
-        case DOUBLE_TAP: register_code16(LCTL(KC_B)); register_code16(LCTL(KC_B)); break;
+        case DOUBLE_TAP: register_code16(KC_B); break;
         case DOUBLE_SINGLE_TAP: tap_code16(LCTL(KC_B)); register_code16(LCTL(KC_B));
     }
 }
@@ -574,7 +574,7 @@ void dance_5_reset(tap_dance_state_t *state, void *user_data) {
     switch (dance_state[5].step) {
         case SINGLE_TAP: unregister_code16(LCTL(KC_B)); break;
         case SINGLE_HOLD: unregister_code16(KC_RIGHT_SHIFT); break;
-        case DOUBLE_TAP: unregister_code16(LCTL(KC_B)); break;
+        case DOUBLE_TAP: unregister_code16(KC_B); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(LCTL(KC_B)); break;
     }
     dance_state[5].step = 0;
